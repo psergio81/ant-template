@@ -1,0 +1,30 @@
+{
+    "id": "ant_template",
+    "name": "Ant and Hibernate Template for CloudBees",
+    "source": "git://github.com/benjaminsavoy/ant_template.git",
+    "runtime": {
+        "type": "tomcat"
+        // Comment the above line, and uncomment the following one to deploy on JBoss
+        //"type": "jboss"
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "ExampleDS"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "freestyle",
+            "options": {
+                "build-steps": [
+                    {
+                        "type": "ant"
+                        "targets": ""
+                    }
+                ]
+                "deploy": "target/*.war"
+            }
+        }
+    }
+}
