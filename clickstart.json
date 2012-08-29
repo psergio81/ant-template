@@ -1,11 +1,13 @@
 {
-    "id": "ant_template",
-    "name": "Ant and Hibernate Template for CloudBees",
-    "source": "git://github.com/benjaminsavoy/ant_template.git",
+    "id": "ant-template",
+    "name": "Ant, Hibernate and Tomcat",
+    "source": "git://github.com/CloudBees-community/ant-template.git",
+    "description" : "This is a basic java web application showcasing Hibernate ORM, all built with Ant",
+    "doc-url" : "https://github.com/CloudBees-community/ant-template/blob/master/README.md",
+    "icon" : "https://raw.github.com/CloudBees-Community/ant-template/master/icon.png",
+    "disabled": true,
     "runtime": {
         "type": "tomcat"
-        // Comment the above line, and uncomment the following one to deploy on JBoss
-        //"type": "jboss"
     },
     "databases": [
         {
@@ -15,16 +17,8 @@
     ],
     "build-with-jenkins": {
         "template": {
-            "type": "freestyle",
-            "options": {
-                "build-steps": [
-                    {
-                        "type": "ant"
-                        "targets": ""
-                    }
-                ]
-                "deploy": "target/*.war"
-            }
+            "type": "ant",
+            "options": { }
         }
     }
 }
