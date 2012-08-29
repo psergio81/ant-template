@@ -1,10 +1,10 @@
 {
     "id": "ant-template",
     "name": "Ant, Hibernate and Tomcat",
-    "source": "git://github.com/CloudBees-community/ant-template.git",
-    "description" : "This is a basic java web application showcasing Hibernate ORM, all built with Ant",
-    "doc-url" : "https://github.com/CloudBees-community/ant-template/blob/master/README.md",
-    "icon" : "https://raw.github.com/CloudBees-Community/ant-template/master/icon.png",
+    "source": "git://github.com/CloudBees-Community/ant-template.git",
+    "description": "This is a basic java web application showcasing Hibernate ORM, all built with Ant",
+    "doc-url": "https://github.com/CloudBees-Community/ant-template/blob/master/README.md",
+    "icon": "https://raw.github.com/CloudBees-Community/ant-template/master/icon.png",
     "disabled": true,
     "runtime": {
         "type": "tomcat"
@@ -17,8 +17,7 @@
     ],
     "build-with-jenkins": {
         "template": {
-            "type": "ant",
-            "options": { }
+            "type": "https://raw.github.com/benjaminsavoy/ant-template/master/config.xml"
         }
     }
 }
