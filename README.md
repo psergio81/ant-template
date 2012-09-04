@@ -1,7 +1,6 @@
 #  And and Hibernate clickstart
 
 This clickstart sets up a database, Ant build service, repository and a basic Hibernate ORM application.
-All built by maven or leiningen. 
 
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-Community/ant-template/master/clickstart.json"><img src="https://s3.amazonaws.com/cloudbees-downloads/clickstart/clickstart-now.png"/></a>
 
