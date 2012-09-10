@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ant-template" default="war">
+<project name="ant-template" default="build">
 
 <target name="clean">
   <delete dir="build" />
@@ -12,7 +12,7 @@
 </target>
 
 <path id="compile.classpath">
-  <!-- Adds dependancies for the servlet API -->
+  <!-- Adds provided dependancies -->
   <fileset dir="lib">
     <include name="*.jar"/>
   </fileset>
@@ -32,8 +32,17 @@
   </copy>
 </target>
 
+<target name="test" depends="compile">
+  <junit printsummary="yes" haltonfailure="yes">
+    <classpath>
+      <pathelement location="build/classes"/>
+      <path refid="compile.classpath"/>
+    </classpath>
+    <test name="test.ItemTest" haltonfailure="no" outfile="result" />
+  </junit>
+</target>
 
-<target name="war" depends="compile">
+<target name="build" depends="test">
   <war destfile="target/ant_template.war" webxml="WebContent/WEB-INF/web.xml">
     <fileset dir="WebContent"/>
     <lib dir="WebContent/WEB-INF/lib"/>
