@@ -1,4 +1,4 @@
-#  And and Hibernate clickstart
+#  Ant and Hibernate clickstart
 
 This clickstart sets up a database, Ant build service, repository and a basic Hibernate ORM application.
 
