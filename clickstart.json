@@ -5,6 +5,7 @@
     "description": "This is a basic java web application showcasing Hibernate ORM, all built with Ant",
     "doc-url": "https://github.com/CloudBees-community/ant-template/blob/master/README.md",
     "icon": "https://raw.github.com/CloudBees-community/ant-template/master/icon.png",
+    "app-package": "http://cloudbees-downloads.s3.amazonaws.com/clickstart/hibernate_basic_ant.war",
     "disabled": true,
     "runtime": {
         "type": "tomcat"
